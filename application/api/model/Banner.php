@@ -11,7 +11,7 @@ use think\Db;
 use think\Exception;
 use think\Model;
 
-class Banner extends BaseModelModel
+class Banner extends BaseModel
 {
     protected $hidden = ['delete_time', 'update_time'];
     public function items(){

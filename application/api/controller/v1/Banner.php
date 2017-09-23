@@ -22,11 +22,9 @@ class Banner
     public function getBanner($id){
         (new IDMustBePostiveint())->goCheck();
         $banner = BannerModel::getBannerByID($id);
-        $banner->hidden(['update_time']);
         if (!$banner){
             throw new BannerMissException();
         }
-        $c = config('setting.img_prefix');
         return $banner;
     }
 }
